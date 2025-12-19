@@ -1,4 +1,5 @@
 const arr = [[1,[2,[3,[4]]]], 2]
+// const arr = [1, [2, [3, [4]]]]
 // const newarr = arr.flat(5)
 // const newarr = arr.flat(Infinity)
 const newarr=[]

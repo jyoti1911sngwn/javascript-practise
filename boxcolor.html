@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple HTML</title>
+</head>
+
+<body>
+    <div id="box" style="background-color: chartreuse;">div
+    </div>
+    <button class="btn">Click</button>
+    <script>
+        const box = document.querySelector("#box")
+        const btn = document.querySelector('.btn')
+        btn.addEventListener('click' , ()=>{
+            box.style.backgroundColor = "red"
+        })
+    </script>
+</body>
+
+</html>

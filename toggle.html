@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple HTML</title>
+    <style>
+    .active {
+      width: 200px;
+      height: 100px;
+      background-color: chartreuse; /* Active color */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .inactive {
+      width: 200px;
+      height: 100px;
+      background-color: red; /* Inactive color */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="active" ></div>
+    
+    <script>
+       const act = document.querySelector('.active')
+       act.addEventListener('click' , ()=>{
+        act.classList.remove('active')
+        act.classList.add('inactive')
+       })
+    </script>
+</body>
+
+</html>

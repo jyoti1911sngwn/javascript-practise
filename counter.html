@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>counter</title>
+</head>
+
+<body>
+    <button id="decrement">decrement</button>
+    <h1 id="countEl"></h1>
+    <button id="increment">increment</button>
+    <script>
+        const inc = document.querySelector('#increment')
+        const dec = document.querySelector('#decrement')
+        const countEl = document.querySelector('#countEl')
+        let count = 0
+        // inc.addEventListener('click',()=>{
+        //     count++
+        //     console.log(count)
+        //     countEl.innerText = count
+        // })
+        // dec.addEventListener('click',()=>{
+        //     count--
+        //     console.log(count)
+        //     countEl.innerText = count
+        // })
+
+        document.addEventListener('click', (e) => {
+            if (e.target.id === 'increment') {
+                count++
+            }
+            else{
+                count--
+            }
+            countEl.innerText = count
+        })
+    </script>
+</body>
+
+</html>

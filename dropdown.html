@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body id='outside'>
+    <button id="select">select</button>
+    <ul id="list" style="display:none">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+    <script>
+        const select = document.querySelector('#select')
+        const list = document.querySelector('#list')
+        const out = document.querySelector('#outside')
+        select.addEventListener('click', (e) => {
+            e.stopPropagation()
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block'
+            }
+            else {
+                list.style.display = 'none'
+            }
+        })
+
+        out.addEventListener('click', () => {
+            list.style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>

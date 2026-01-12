@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            scroll to end
+        </title>
+    </head>
+    <body style="height: 2000px;">
+        <script>
+            console.log(window.innerHeight) //The height (in pixels) of the browser’s visible viewport.
+            console.log(window.scrollY) //How many pixels the page has been scrolled vertically from the top.
+            console.log(document.documentElement.scrollHeight) //The total height of the entire HTML page, including the part that is not currently visible on the screen.
+            window.addEventListener("scroll", ()=>{
+                console.log('scrolling!!')
+                if(window.innerHeight + window.scrollY>= document.documentElement.scrollHeight){
+                    console.log("reached end")
+                }
+            })
+        </script>
+    </body>
+</html>

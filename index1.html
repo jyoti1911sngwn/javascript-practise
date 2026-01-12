@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple HTML</title>
+</head>
+
+<body>
+    <h1 class="myclass">Hello World</h1>
+    <h1 class="myclass">Hello World 1</h1>
+    <h1 class="myclass">Hello World 2</h1>
+    <h1 class="myclass">Hello World 3</h1>
+
+    <p>This is a simple HTML file.</p>
+    <script>
+        const txt = document.querySelectorAll(".myclass")
+        txt.forEach((val) => (
+            console.log(val.textContent)
+        ))
+    </script>
+</body>
+
+</html>

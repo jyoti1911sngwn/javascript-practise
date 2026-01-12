@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+       <title>Open Close Modal</title>
+       <link rel="stylesheet" href="openclosemodal.css">
+    </head>
+    <body id="openModalBtn">
+       <h1>Open and Close Modal Example</h1>
+       <!-- <button id="openModalBtn">Open Modal</button>   -->
+       <div id="box" style="background-color: brown; width: 100px; height: 100px;"></div>
+       <script>
+        const box = document.querySelector('#box');
+        const click = document.querySelector('#openModalBtn');
+        openModalBtn.addEventListener('click',()=>{
+            if(box.style.display === 'none' || box.style.display ===''){
+                box.style.display = 'block';
+            }
+            else{
+                box.style.display = 'none';
+            }
+        })
+       </script>      
+    </body>
+ </html>

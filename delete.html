@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple HTML</title>
+</head>
+
+<body>
+    <div id="card" style="background-color: chartreuse;">div
+    </div>
+     <div id="card1" style="background-color:aqua;">div
+    </div> <div id="card2" style="background-color:blueviolet;">div
+    </div>
+    <button id="btn">Click</button>
+    <script>
+       const card = document.querySelector('#card')
+       const btn = document.querySelector('#btn')
+       btn.addEventListener('click' , ()=>{
+           card.remove()
+
+       })
+    </script>
+</body>
+
+</html>

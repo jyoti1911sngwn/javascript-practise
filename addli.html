@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple HTML</title>
+</head>
+
+<body>
+    <ul id="id">
+        <li>one</li>
+    </ul>
+    <button class="btn">Click</button>
+    <script>
+       const ul = document.querySelector('#id')
+       const btn = document.querySelector('.btn')
+       let arr = ['two', 'three', 'four']
+       let i =0 
+       btn.addEventListener('click', ()=>{
+        if(i<arr.length){
+            const li = document.createElement('li')
+            li.innerText = arr[i]
+            ul.appendChild(li)
+            i++
+        }else{
+            btn.style.backgroundColor = 'gray'
+        }
+       })
+    </script>
+</body>
+
+</html>

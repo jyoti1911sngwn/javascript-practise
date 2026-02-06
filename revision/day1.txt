@@ -1,0 +1,65 @@
+VAR / LET / CONST
+- var → function scoped, hoisted as undefined, can redeclare, can reassign, attaches to window in global scope
+- let → block scoped, hoisted but in TDZ, cannot redeclare in same scope, can reassign, not on window
+- const → block scoped, hoisted but in TDZ, cannot redeclare, cannot reassign, must initialize immediately
+- const prevents reassignment, NOT mutation (objects/arrays can change inside)
+- let creates new binding in each loop iteration
+- var ignores block scope inside { }
+
+SCOPE
+- global scope → accessible everywhere
+- function scope → variables inside function not accessible outside
+- block scope → let/const respect { }, var does not
+- lexical scope → inner function can access variables from outer where it was defined
+
+HOISTING
+- var hoisted and initialized as undefined
+- let/const hoisted but not initialized → Temporal Dead Zone
+- accessing let/const before declaration → ReferenceError
+- function declarations fully hoisted
+- function expressions behave like variables (not fully hoisted)
+
+TEMPORAL DEAD ZONE (TDZ)
+- time between hoisting and initialization of let/const
+- accessing variable in TDZ throws ReferenceError
+
+CLOSURES
+- closure = function + its lexical environment
+- inner function remembers outer variables even after outer finishes
+- used for data privacy, counters, memoization, event handlers, React hooks
+- closures keep reference, not copy
+- common loop issue: var shares same variable, let creates new one each iteration
+
+THIS KEYWORD
+- this depends on how function is called (not where defined for normal functions)
+
+Binding rules:
+1. default → normal function → global object (or undefined in strict mode)
+2. implicit → obj.method() → this = obj
+3. explicit → call/apply/bind set this manually
+4. new → this refers to new instance
+
+ARROW vs NORMAL FUNCTION
+- normal function has its own this (decided at call time)
+- arrow function has no own this → inherits from surrounding scope
+- arrow cannot be constructor
+- arrow has no arguments object
+
+COMMON THIS TRAPS
+- setTimeout normal function loses object this
+- arrow inside method keeps outer this
+- extracting method loses this
+  const fn = obj.method; fn() → this lost
+
+CALL / APPLY / BIND
+- call → invokes immediately, args separated
+- apply → invokes immediately, args array
+- bind → returns new function with fixed this
+
+INTERVIEW EDGE CASES TO KNOW
+- var loop + setTimeout prints same value
+- let loop fixes closure issue
+- TDZ causes ReferenceError
+- const object can mutate properties
+- arrow function inside object uses outer this
+- extracted method loses this
